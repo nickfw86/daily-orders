@@ -2,7 +2,7 @@ require("dotenv").config();
 const mysql = require("mysql");
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 const nodemailer = require("nodemailer");
-const clearOrders = require("./deleteTable");
+const clearOrders = require("./clearTable");
 
 //Connect to MySQL DB
 var connection = mysql.createConnection({
