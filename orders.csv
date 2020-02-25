@@ -1,0 +1,4 @@
+"Order_ID","Customer_Name","Adress_Line_1","Adress_Line_2","City","State","Zip","Country","Products_SKU","UPC",Products_Qty,"Item_Price","Shipping_Method",Shipping_Cost,Order_Total,"Customer_Phone"
+"1234","Bob Smith","Street 1","Apt 2","Atlanta","GA","30318","US","Prod1","UPC1",1,"10","Fixed",5,65,"8675309"
+"1234","Bob Smith","Street 1","Apt 2","Atlanta","GA","30318","US","Prod2","UPC2",2,"20","Fixed",5,65,"8675309"
+"1234","Bob Smith","Street 1","Apt 2","Atlanta","GA","30318","US","Prod3","UPC3",2,"30","Fixed",5,65,"8675309"
