@@ -1,5 +1,7 @@
-# daily-orders
+# **daily-orders**
+
 An application that sends a csv file containing order data from a MySql  Database to a supplier via email on a 24 hour basis.
+
 
 This application queries a table called orders, which contains order details in a format where one product is listed per row (i.e. an order with 3 products would occupy 3 rows). See orders.csv for example, the table structure matches this file exactly. The results of the query are then edited, so that the first row (header row) of each order is the only row that contains customer details. The remaining rows will only contain product line data.
 
