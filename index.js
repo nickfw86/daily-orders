@@ -18,6 +18,7 @@ connection.query("Select * from orders ORDER BY `Order_ID` DESC", function(
   results
 ) {
   if (error) throw error;
+  if (results.length == 0) {process.exit(1)};
   //This loop formats results so only the first row of an order contains customer information.
   for (let i = 1; i < results.length; i++) {
     if (results[i].Order_ID == results[i - 1].Order_ID) {
