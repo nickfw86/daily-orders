@@ -11,6 +11,4 @@ After the csv file is mailed another function runs to delete all the records fro
 
 This app should be run once every 24 hours, as suppliers generally want to recieve order reports on a daily basis.
 
-Need to add a condition to run app, only if there are results on the orders table. We do not need to send an email if there were no orders placed over the past 24 hours.
-
 Currently, this app runs on desktop, but I aim to move it to GCP and schedule it to run on either a VM or Cloud Run.
