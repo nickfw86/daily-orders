@@ -1,20 +1,100 @@
-let formatResults = function(results) {
-  for (let i = 1; i < results.length; i++) {
-    if (results[i].Order_ID == results[i - 1].Order_ID) {
-      results[i].Customer_Name = " ";
-      results[i].Adress_Line_1 = " ";
-      results[i].Adress_Line_2 = " ";
-      results[i].City = " ";
-      results[i].State = " ";
-      results[i].Zip = " ";
-      results[i].Country = " ";
-      results[i].Shipping_Method = " ";
-      results[i].Shipping_Cost = " ";
-      results[i].Order_Total = " ";
-      results[i].Customer_Phone = " ";
-    }
-  }
-  return results
-};
+const formatResults = require("./removeCustomerDetails");
 
-module.exports = formatResults;
+let resIn = [
+  {
+    Order_ID: "1234",
+    Customer_Name: "Bob Smith",
+    Adress_Line_1: "Street 1",
+    Adress_Line_2: "Apt 2",
+    City: "Atlanta",
+    State: "GA",
+    Zip: "30318",
+    Country: "US",
+    Products_SKU: "Prod1",
+    Shipping_Method: "Fixed",
+    Shipping_Cost: 5,
+    Order_Total: 65,
+    Customer_Phone: "8675309"
+  },
+  {
+    Order_ID: "1234",
+    Customer_Name: "Bob Smith",
+    Adress_Line_1: "Street 1",
+    Adress_Line_2: "Apt 2",
+    City: "Atlanta",
+    State: "GA",
+    Zip: "30318",
+    Country: "US",
+    Products_SKU: "Prod1",
+    Shipping_Method: "Fixed",
+    Shipping_Cost: 5,
+    Order_Total: 65,
+    Customer_Phone: "8675309"
+  },
+  {
+    Order_ID: "1234",
+    Customer_Name: "Bob Smith",
+    Adress_Line_1: "Street 1",
+    Adress_Line_2: "Apt 2",
+    City: "Atlanta",
+    State: "GA",
+    Zip: "30318",
+    Country: "US",
+    Products_SKU: "Prod1",
+    Shipping_Method: "Fixed",
+    Shipping_Cost: 5,
+    Order_Total: 65,
+    Customer_Phone: "8675309"
+  }
+];
+const resOut = [
+  {
+    Order_ID: "1234",
+    Customer_Name: "Bob Smith",
+    Adress_Line_1: "Street 1",
+    Adress_Line_2: "Apt 2",
+    City: "Atlanta",
+    State: "GA",
+    Zip: "30318",
+    Country: "US",
+    Products_SKU: "Prod1",
+    Shipping_Method: "Fixed",
+    Shipping_Cost: 5,
+    Order_Total: 65,
+    Customer_Phone: "8675309"
+  },
+  {
+    Order_ID: "1234",
+    Customer_Name: " ",
+    Adress_Line_1: " ",
+    Adress_Line_2: " ",
+    City: " ",
+    State: " ",
+    Zip: " ",
+    Country: " ",
+    Products_SKU: "Prod1",
+    Shipping_Method: " ",
+    Shipping_Cost: " ",
+    Order_Total: " ",
+    Customer_Phone: " "
+  },
+  {
+    Order_ID: "1234",
+    Customer_Name: " ",
+    Adress_Line_1: " ",
+    Adress_Line_2: " ",
+    City: " ",
+    State: " ",
+    Zip: " ",
+    Country: " ",
+    Products_SKU: "Prod1",
+    Shipping_Method: " ",
+    Shipping_Cost: " ",
+    Order_Total: " ",
+    Customer_Phone: " "
+  }
+];
+
+test('removes customer fields of child rows.', () => {
+  expect(formatResults(resIn)).toEqual(resOut);
+});
