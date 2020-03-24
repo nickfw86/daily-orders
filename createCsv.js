@@ -23,7 +23,7 @@ let createCSV = function(results) {
     ]
   });
   //Write the query results to the csv file defined above.
-  //try changing .then to async await
+  
   csvWriter.writeRecords(results);
   console.log("CSV Created");
 };
