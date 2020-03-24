@@ -6,7 +6,9 @@ const createCsv = require("./createCsv");
 let writeCsv = function(){
 dbConnection.query("Select * from orders ORDER BY `Order_ID` DESC", (err, results) =>{
     if(err) throw err;
-    if (results.length === 0) {process.exit(1)};
+    if (results.length === 0) {
+        console.log('No data to send');
+        process.exit(1)};
     let formattedResults = formatResults(results);
     createCsv(formattedResults);
 });

@@ -20,7 +20,7 @@ const sendCsv = async function() {
     attachments: [
       {
         filename: "Orders_Test.csv",
-        path: "/Users/nickwatson/Desktop/Orders_Test.csv"
+        path: process.env.FILE_PATH
       }
     ]
   });

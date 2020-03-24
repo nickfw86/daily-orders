@@ -2,7 +2,7 @@ require("dotenv").config();
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
 let createCSV = function(results) {
   let csvWriter = createCsvWriter({
-    path: "/Users/nickwatson/Desktop/Orders_Test.csv",
+    path: process.env.FILE_PATH,
     header: [
       { id: "Order_ID", title: "Order_ID" },
       { id: "Customer_Name", title: "Customer_Name" },
