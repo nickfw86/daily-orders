@@ -11,4 +11,4 @@ After the csv file is mailed another function runs to delete all the records fro
 
 This app should be run once every 24 hours, as suppliers generally want to recieve order reports on a daily basis.
 
-I used this project as an opportunity to learn some docker basics. This app was containerized and added to my container registry on GCP. I plan to use the docker image to deploy to cloud run or to a VM. Currently, the docker image runs fine locally.
+I used this project as an opportunity to learn some docker basics. This app was containerized and added to my container registry on GCP. Using docker image to deploy to cloud run or to a VM. 
